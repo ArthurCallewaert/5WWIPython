@@ -4,13 +4,15 @@ l = float(input('lengte: '))
 c = float(input('kubieke meter: '))
 r = float(input('straal: '))
 h = float(input('hoogte: '))
+pi = 3.14159265359
 #berekening
 opp = (l * b) / 10000
 volume_graan = opp * c
-volume_silo = (r)**2 * 3.14159265359* h
-volle_silos = volume_graan // volume_silo
-silo = volume_graan % volume_silo
+volume_silo = (r)**2 * pi * h
+aantal_silo = volume_graan // volume_silo
+rest = (volume_graan / volume_silo - aantal_silo) * volume_silo
+hoogte = rest / ((r)**2 * pi)
 #uitvoer
 
-print(volle_silos)
-print(silo)
+print(aantal_silo + 1)
+print(hoogte)
