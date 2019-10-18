@@ -12,13 +12,18 @@ aankomst_uur2 = int(input('aankomst uur thuis: '))
 aankomst_min2 = int(input('aankomst min thuis: '))
 
 #berekening
-foutieve_min = (aankomst_uur2 - vertrek_uur1)*60 + aankomst_min2 - vertrek_min1
-vriendin_min = (vertrek_uur2 - aankomst_uur1)*60 + vertrek_min2 - aankomst_min1
-reis = (foutieve_min - vriendin_min) / 2
-juist = vertrek_uur2*60 + vertrek_min2 + reis
-uur = juist // 60
-juist %= 60
+vertrek1 = (vertrek_uur1 * 60) + vertrek_min1
+aankomst1 = (aankomst_uur1 * 60) + aankomst_min1
+vertrek2 = (vertrek_uur2 * 60) + vertrek_min2
+aankomst2 = (aankomst_uur2 * 60) + aankomst_min2
+
+f_t = aankomst2 - vertrek1
+j_t = vertrek2 - aankomst1
+reis = (f_t - groen) / 2
+j_min = vertrek2 + j_t
+j_uur = j_min // 60
+j_min %= 60
 
 #uitvoer
-print(int(uur))
-print(int(juist))
+print(int(c_uur))
+print(int(c_min))

@@ -11,4 +11,3 @@ massa = M * mol
 #uitvoer
 print(massa)
 print(aantal_deeltjes)
-i
