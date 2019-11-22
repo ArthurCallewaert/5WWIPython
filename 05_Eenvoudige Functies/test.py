@@ -26,7 +26,7 @@ print(random())
 print(uniform(1, 5))
 print(randint(3, 100))
 
-import randomm
+import random
 random.seed(1233)
 #random is nooit random
 print(random.random())
