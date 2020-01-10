@@ -1,12 +1,18 @@
-g1 = int(input('getal 1: '))
-g2 = int(input('getal 2: '))
-g3 = int(input('getal 3: '))
-g4 = int(input('getal 4: '))
-g5 = int(input('getal 5: '))
+aantal = int(input("aantal getallen: "))
 
-maxi = max(g1, g2, g3, g4, g5)
-som = g1 + g2 + g3 + g4 + g5
-gem = som / 5
+# Lees het eerste getal voor de lus in
+getal_0 = int(input("geef getal :"))
 
-uitvoer = 'Het grootste getal is {} en het gemiddelde is {:.2f}'
-print(uitvoer.format(maxi, gem))
+# Het eerste getal is inmiddelijk de som en het grootste getal
+som, grootste = getal_0, getal_0
+
+for i in range(aantal - 1):
+    getal = int(input("geef getal :"))
+    som += getal
+    grootste = max(grootste, getal)
+
+gemiddelde = som / aantal
+
+uitvoer = "Het grootste getal is {} en het gemiddelde is {:.2f}"
+print(uitvoer.format(grootste, gemiddelde))
+
